@@ -1,7 +1,10 @@
+&nbsp;
+
 <div align="center">
    <h1><a href="https://scoop.sh/">Scoop</a></h1>
    <p>A command-line installer for Windows.</p>
 </div>
+
 &nbsp;
 
 ### 软件安装

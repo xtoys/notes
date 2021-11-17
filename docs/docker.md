@@ -1,7 +1,7 @@
 &nbsp;
 
 <p align="center">
-  <img src="../assets/docker.svg" width="33%" alt="docker" />
+  <img src="../assets/docker.svg" width="25%" alt="docker" />
 </p>
 
 &nbsp;

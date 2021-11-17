@@ -1,7 +1,7 @@
 &nbsp;
 
 <p align="center">
-  <img src="../assets/box.svg" width="33%" alt="box" />
+  <img src="../assets/box.svg" width="20%" alt="box" />
 </p>
 
 &nbsp;

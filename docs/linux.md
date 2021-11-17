@@ -1,7 +1,7 @@
 &nbsp;
 
 <p align="center">
-  <img src="../assets/linux.svg" width="33%" alt="linux" />
+  <img src="../assets/linux.svg" width="20%" alt="linux" />
 </p>
 
 &nbsp;

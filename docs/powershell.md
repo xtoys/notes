@@ -1,5 +1,7 @@
 ![preview](../assets/terminal.png)
 
+&nbsp;
+
 ## 终端配置主题
 
 ### 工具安装
