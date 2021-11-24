@@ -65,3 +65,9 @@ scoop install ventoy
 > 通过本地代理的方式将 https 请求代理到一些国内的加速通道
 
 **`下载通道`** [Github](https://github.com/docmirror/dev-sidecar/releases) | [Gitee](https://gitee.com/docmirror/dev-sidecar/releases)
+
+> ### [比译](https://biyidev.com/)
+>
+> 一款便捷的翻译和词典应用，支持划词/截图翻译
+
+**`下载通道`** [Github](https://github.com/biyidev/biyi_app/releases) | [Official](https://biyidev.com/release-notes)
