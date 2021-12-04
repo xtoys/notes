@@ -17,48 +17,45 @@ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 iwr -useb get.scoop.sh | iex
 ```
 
+> Q: 安装 scoop 的过程中网络连接错误，重新执行安装指令显示已经安装
+>
+> A: 删除 `%USERPROFILE%\scoop` 这个文件夹，并重新执行下载命令；或添加代理服务后执行下载命令
+
+> Q: 如何添加代理
+>
+> A: 查看文档 [**`proxy`**](./proxy.md)
+
 ### 常用指令
 
 ```powershell
 # 帮助
 scoop help
-# 搜索软件 git
+# 搜索软件 <git>
 scoop search git
-# 安装软件  git
+# 安装软件 <git>
 scoop install git
-# 全局安装 git
-sudo scoop install git --global # 需要先安装 sudo
-# 卸载软件 git
+# 全局安装 <git> 需要先安装 sudo
+sudo scoop install git --global
+# 卸载软件 <git>
 scoop uninstall git
-# 查看软件信息
+# 软件信息 <git>
 scoop info git
+
+# 列出已装软件
+scoop list
+# 检查软件更新
+scoop status
 # 更新所有软件
 scoop update *
-# 删除软件的老版本
-scoop cleanup git
-# 列出已安装的名字中带有 i 的软件
-scoop list i # 不填写则列出所有已安装软件
+# 清除旧版软件
+scoop cleanup *
 ```
-
-### [设置代理](https://github.com/ScoopInstaller/Scoop/wiki/Using-Scoop-behind-a-proxy)
-
-```powershell
-# 使用当前用户的默认代理
-scoop config proxy currentuser@default
-
-# 设置代理(http)
-scoop config proxy 127.0.0.1:7890
-
-# 移除代理
-scoop config rm proxy
-```
-
-> 若无代理服务 可使用开源工具 [dev-sidecar](https://github.com/docmirror/dev-sidecar) 进行代理
 
 ### 添加软件源
 
 ```powershell
-# 添加软件源功能依赖于 git，请确保电脑中已经安装 git 并且配置好了环境变量（也可以使用 scoop 安装 git）
+# 添加软件源 功能依赖于 git，请确保电脑中已经安装 git
+# 未安装可运行此条命令执行安装 scoop install git
 # 列出官方已知软件源
 scoop bucket known
 
@@ -67,37 +64,6 @@ scoop bucket add extras # 推荐添加这个软件源，大部分软件都再这
 
 # 添加官方未知软件源
 scoop bucket add name gitrepo # name 处填写自定义的名字，gitrepo 处填写 git 地址
-```
-
-### MySQL 安装与配置
-
-```powershell
-# 安装 MySQL
-scoop install mysql
-
-# 初始化本地数据库
-mysqld --initialize
-
-# 安装 MySQL 服务
-mysqld --install mysql
-
-# 启动 MySQL 服务
-sc start mysql
-
-# 使用初始密码进入 MySQL：初始密码为空
-# mysql -u root -p
-
-# 运行数据库
-mysqld --console
-
-# 修改 MySQL 8 的密码插件及初始密码
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-
-# 退出数据库
-quit;
-
-# 停止 MySQL 服务
-sc stop mysql
 ```
 
 ### Python 版本切换
@@ -117,15 +83,11 @@ python --version # -> Python 3.x.x
 
 ### 问题记录
 
-> 1. Q: 安装 scoop 的过程中网络连接错误，重新执行安装指令显示已经安装
->
->    A: 删除 `%USERPROFILE%\scoop` 这个文件夹。
->
-> 2. Q: 使用 scoop 安装软件时下载失败，重新执行安装指令显示已安装
+> 1. Q: 使用 scoop 安装软件时下载失败，重新执行安装指令显示已安装
 >
 >    A: 先执行 scoop uninstall <软件名>，再次执行安装指令即可
 >
-> 3. Q: 如何安装软件到其他路径下
+> 2. Q: 如何安装软件到其他路径下
 >
 >    A:
 >
@@ -143,7 +105,7 @@ python --version # -> Python 3.x.x
 >    scoop install -g <app>
 >    ```
 >
-> 4. Q: 如何回退软件版本
+> 3. Q: 如何回退软件版本
 >
 >    A: 我暂时没有在文档中找到回退版本相关的指令。
 

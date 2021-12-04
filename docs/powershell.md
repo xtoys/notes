@@ -6,19 +6,19 @@
 
 ### 工具安装
 
-- [Scoop](./scoop.md)
+- [Scoop 安装与使用指南](./scoop.md)
 
-- [Windows Terminal](https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701)
-- [git](https://git-scm.com/downloads) | [posh-git](https://github.com/dahlbyk/posh-git) | [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh)
+- [Windows Terminal 安装](https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701)
+- [Git 官网](https://git-scm.com/downloads) | [posh-git 使用指南](http://dahlbyk.github.io/posh-git/) | [oh-my-posh 使用指南](https://ohmyposh.dev/docs/)
 
 ```powershell
 # 添加软件源 功能依赖于 git，请确保电脑中已经安装 git
-scoop install git
+# 未安装可运行此条命令执行安装 scoop install git
 scoop bucket add extras
 
 # 工具安装
 scoop install posh-git
-scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+scoop install oh-my-posh3
 ```
 
 ### 主题配置
@@ -28,7 +28,7 @@ scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/downl
 notepad $profile
 
 # 在记事本中输入如下内容，xtoys为主题名
-Invoke-Expression (oh-my-posh --init --shell pwsh --config "$(scoop prefix oh-my-posh)/themes/xtoys.omp.json")
+Invoke-Expression (oh-my-posh --init --shell pwsh --config "$(scoop prefix oh-my-posh3)/themes/xtoys.omp.json")
 # 更多主题 https://ohmyposh.dev/docs/themes
 
 # 刷新当前主题
@@ -69,22 +69,3 @@ scoop install Hack-NF
   "yellow": "#C19C00"
 }
 ```
-
-## 终端配置代理
-
-> 通过终端访问 github 等国外网站的速度感人，因此需要为终端设置代理来提高速度
->
-> 假设代理地址是 `127.0.0.1:7890`
-
-```powershell
-# 设置代理
-netsh winhttp set proxy 127.0.0.1:7890
-
-# 查看代理
-netsh winhttp show proxy
-
-# 取消代理
-netsh winhttp reset proxy
-```
-
-> 若无代理服务 可使用开源工具 [dev-sidecar](https://github.com/docmirror/dev-sidecar) 进行代理
