@@ -19,11 +19,11 @@ iwr -useb get.scoop.sh | iex
 
 > Q: 安装 scoop 的过程中网络连接错误，重新执行安装指令显示已经安装
 >
-> A: 删除 `%USERPROFILE%\scoop` 这个文件夹，并重新执行下载命令；或添加代理服务后执行下载命令
+> A: 删除 `%USERPROFILE%\scoop` 这个文件夹，`配置 hosts` 或添加 `代理服务` 后重新执行下载命令
 
-> Q: 如何添加代理
+> Q: 如何配置 hosts 以及添加代理服务
 >
-> A: 查看文档 [**`proxy`**](./proxy.md)
+> A: 查看文档 [**`配置 hosts`**](./hosts.md) | [**`代理服务`**](./proxy.md)
 
 ### 常用指令
 
@@ -72,7 +72,7 @@ scoop bucket add name gitrepo # name 处填写自定义的名字，gitrepo 处�
 scoop install python27 python
 python --version # -> Python 3.x.x
 
-# switch to python 2.7.x
+# switch (to 2.7.x)
 scoop reset python27
 python --version # -> Python 2.7.x
 

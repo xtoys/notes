@@ -19,6 +19,10 @@
 
   > 系统代理 | 终端代理
 
+- [Github Hosts](./docs/hosts.md)
+
+  > Github 加速
+
 ## Linux
 
 - [Docker](./docs/docker.md)
@@ -33,7 +37,7 @@
 
 - [Scoop](./docs/scoop.md)
 
-  > 软件安装 | 常用指令 | 添加软件源 | 其他
+  > 软件安装 | 常用指令 | 添加软件源
 
 - [Powershell](./docs/powershell.md)
 
