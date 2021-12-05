@@ -57,39 +57,47 @@
 # 设置代理
 netsh winhttp set proxy 127.0.0.1:7890
 
-# 查看代理
-netsh winhttp show proxy
-
 # 取消代理
 netsh winhttp reset proxy
+
+# 查看代理
+netsh winhttp show proxy
 ```
 
-- Linux
+- Linux/macOS
+
+```bash
+# 在 .bashrc 或者 .zshrc 添加下面内容 <通过设置alias简写来简化操作>
+# 这里以写入 .bashrc 为例
+echo "alias setproxy='export ALL_PROXY=http://127.0.0.1:7890'" >> ~/.bashrc
+echo "alias unsetproxy='unset ALL_PROXY'" >> ~/.bashrc
+# 应用设置
+source ~/.bashrc
+```
 
 ```bash
 # 设置代理
-set http_proxy=http://127.0.0.1:7890
-set https_proxy=$http_proxy
-
-# 查看代理
-echo $http_proxy
+setproxy
 
 # 取消代理
-set http_proxy=
+unsetproxy
+
+# 查看代理
+printenv | grep -i proxy
 ```
 
-- Git
+- ❗ Git
 
 ```bash
 # 设置代理
 git config --global http.proxy http://127.0.0.1:7890
 git config --global https.proxy http://127.0.0.1:7890
 
-# 查看代理
-git config --global --get http.proxy
-git config --global --get https.proxy
-
 # 取消代理
 git config --global --unset http.proxy
 git config --global --unset https.proxy
+
+# 查看代理
+git config --global --get http.proxy
+git config --global --get https.proxy
 ```

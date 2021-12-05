@@ -18,6 +18,12 @@
 > 一个管理 hosts 文件的应用
 >
 > **`客户端`** [SwitchHosts](https://github.com/oldj/SwitchHosts/releases)
+>
+> ```ini
+> # 若下载慢速或无法下载可使用 [文件代理加速下载服务]
+> # 在下载链接前加上 https://ghproxy.com/
+> https://ghproxy.com/https://github.com/oldj/SwitchHosts/releases/download/v4.0.3/SwitchHosts_installer_4.0.3.6070.exe
+> ```
 
 - 手动配置
 
@@ -50,4 +56,12 @@
 
 - 注意事项
 
-  > 不要忘记点击侧边栏的开关哦
+  > **不要忘记点击侧边栏的开关哦**
+  >
+  > 若 Windows 下修改 hosts 文件提示 `只读 不能修改`
+  >
+  > - 首先打开 hosts 文件所在的位置，路径是在：`C:\Windows\System32\drivers\etc`
+  > - 右键点击 hosts 文件，在打开的菜单项中，选择 `属性`
+  > - hosts 属性窗口中，切换到 `安全` 选项卡，选中 `Users(xxxx)` ，点击 `编辑`
+  > - hosts 的权限窗口，将用户的 `完全控制` 选中，点击 `应用`
+  > - 最后别忘记点击 `确认` 保存
