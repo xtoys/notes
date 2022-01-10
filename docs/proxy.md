@@ -71,6 +71,7 @@ netsh winhttp show proxy
 # 这里以写入 .bashrc 为例
 echo "alias setproxy='export ALL_PROXY=http://127.0.0.1:7890'" >> ~/.bashrc
 echo "alias unsetproxy='unset ALL_PROXY'" >> ~/.bashrc
+echo "alias showproxy='printenv | grep -i proxy'" >> ~/.bashrc
 # 应用设置
 source ~/.bashrc
 ```
@@ -83,7 +84,7 @@ setproxy
 unsetproxy
 
 # 查看代理
-printenv | grep -i proxy
+showproxy
 ```
 
 - ❗ Git
